@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_BASE_URL || ''
 import { useState, useEffect, useCallback, useRef } from 'react'
 import axios from 'axios'
 
@@ -13,8 +14,8 @@ export function useAlerts() {
   const fetchAlerts = useCallback(async () => {
     try {
       const [alertsRes, statsRes] = await Promise.all([
-        axios.get('/api/alerts?limit=100'),
-        axios.get('/api/alerts/stats')
+        axios.get(`${API}/api/alerts?limit=100`),
+        axios.get(`${API}/api/alerts/stats`)
       ])
       setAlerts(alertsRes.data.data || [])
       setStats(statsRes.data)
@@ -31,7 +32,7 @@ export function useAlerts() {
       eventSourceRef.current.close()
     }
 
-    const es = new EventSource('/api/stream')
+    const es = new EventSource(`${API}/api/stream`)
     eventSourceRef.current = es
 
     es.onopen = () => {
