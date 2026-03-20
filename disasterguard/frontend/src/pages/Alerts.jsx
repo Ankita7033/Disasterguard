@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_BASE_URL || ''
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import RiskBadge from '../components/RiskBadge'
@@ -33,7 +34,7 @@ export default function Alerts() {
     try {
       const params = new URLSearchParams({ limit: 200, offset: 0 })
       if (severity !== 'ALL') params.set('severity', severity)
-      const res = await axios.get(`/api/alerts?${params}`)
+      const res = await axios.get(`${API}/api/alerts?${params}`)
       setAlerts(res.data.data || [])
       setError(null)
     } catch (err) {
@@ -54,7 +55,7 @@ export default function Alerts() {
   const resolve = async (id) => {
     setResolving(id)
     try {
-      await axios.patch(`/api/alerts/${id}/resolve`)
+      await axios.patch(`${API}/api/alerts/${id}/resolve`)
       setAlerts(prev => prev.map(a => a.id === id ? { ...a, resolved: true } : a))
     } catch (err) {
       console.error('Resolve failed:', err.message)
