@@ -5,8 +5,8 @@
 
 **Users:** Government disaster coordinators · State relief agencies · NGO field workers · Municipal corporations
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-disasterguard.vercel.app-blue)](https://disasterguard.vercel.app)
-[![Backend](https://img.shields.io/badge/Backend-Render-green)](https://disasterguard-api.onrender.com/health)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://disasterguard-six.vercel.app)
+[![Backend](https://img.shields.io/badge/Backend-Render-green)](https://disasterguard-zcni.onrender.com/health)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
