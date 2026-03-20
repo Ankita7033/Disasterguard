@@ -1,3 +1,4 @@
+const API = import.meta.env.VITE_API_BASE_URL || ''
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -29,7 +30,7 @@ export default function Shelters() {
   const fetchShelters = async () => {
     setLoading(true)
     try {
-      const res = await axios.get('/api/resources/shelters')
+      const res = await axios.get(`${API}/api/resources/shelters`)
       setShelters(res.data)
       setError(null)
     } catch (err) {
@@ -47,7 +48,7 @@ export default function Shelters() {
     setSaving(shelter.id)
     setSaveError(prev => ({ ...prev, [shelter.id]: null }))
     try {
-      const res = await axios.patch(`/api/resources/shelters/${shelter.id}/occupancy`, { occupancy: newVal })
+      const res = await axios.patch(`${API}/api/resources/shelters/${shelter.id}/occupancy`, { occupancy: newVal })
       setShelters(prev => prev.map(s => s.id === shelter.id ? res.data : s))
       setEditing(prev => { const n = { ...prev }; delete n[shelter.id]; return n })
     } catch (err) {
