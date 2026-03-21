@@ -29,7 +29,7 @@ DisasterGuard is the only open-source, fully free, AI-powered system that:
 
 ## Architecture
 
-![DisasterGuard Architecture](./assets/architecture.png)
+https://github.com/Ankita7033/Disasterguard/blob/main/disasterguard/assets/disasterguard_architecture_diagram.svg
 
 ### Data flow — step by step
 
