@@ -288,8 +288,3 @@ export default function ReplayTimeline() {
     </div>
   )
 }
-```
-
-Copy everything above → paste into Notepad → save as `ReplayTimeline.jsx` in:
-```
-disasterguard/frontend/src/components/ReplayTimeline.jsx
