@@ -313,3 +313,14 @@ disasterguard/
 | Auth | Supabase Auth |
 | Maps | Leaflet.js + CartoDB dark tiles |
 | Hosting | Vercel (frontend) + Render (backend) |
+
+## Image of the Website
+
+<img width="1919" height="868" alt="login" src="https://github.com/user-attachments/assets/407f4669-8248-4c88-8cb3-973c58d89064" />
+<img width="1906" height="796" alt="Dashboard" src="https://github.com/user-attachments/assets/516683dd-baec-46fd-b588-4d12f27be9ef" />
+<img width="1917" height="863" alt="Shelter" src="https://github.com/user-attachments/assets/282e2a99-57e5-47c8-8016-60c190f17319" />
+<img width="1917" height="872" alt="Alert" src="https://github.com/user-attachments/assets/1bd9bb00-42a6-4053-a873-242394193587" />
+
+
+
+
