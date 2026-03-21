@@ -2,8 +2,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 
-<NavLink to="/replay" className={navClass}>Replay</NavLink>
-
 function ShieldIcon() {
   return (
     <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,9 +37,10 @@ export default function Navbar() {
             <span className="hidden sm:inline text-xs bg-blue-500/20 text-blue-400 border border-blue-500/30 px-1.5 py-0.5 rounded font-medium">LIVE</span>
           </div>
           <div className="hidden md:flex items-center gap-1">
-            <NavLink to="/"        className={navClass} end>Dashboard</NavLink>
-            <NavLink to="/alerts"  className={navClass}>Alerts</NavLink>
+            <NavLink to="/" className={navClass} end>Dashboard</NavLink>
+            <NavLink to="/alerts" className={navClass}>Alerts</NavLink>
             <NavLink to="/shelters" className={navClass}>Shelters</NavLink>
+            <NavLink to="/replay" className={navClass}>Replay</NavLink>
           </div>
         </div>
 
@@ -64,9 +63,10 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden border-t border-gray-800 px-4 py-3 space-y-1">
-          <NavLink to="/"        className={navClass} end onClick={() => setMenuOpen(false)}>Dashboard</NavLink>
-          <NavLink to="/alerts"  className={navClass} onClick={() => setMenuOpen(false)}>Alerts</NavLink>
+          <NavLink to="/" className={navClass} end onClick={() => setMenuOpen(false)}>Dashboard</NavLink>
+          <NavLink to="/alerts" className={navClass} onClick={() => setMenuOpen(false)}>Alerts</NavLink>
           <NavLink to="/shelters" className={navClass} onClick={() => setMenuOpen(false)}>Shelters</NavLink>
+          <NavLink to="/replay" className={navClass} onClick={() => setMenuOpen(false)}>Replay</NavLink>
         </div>
       )}
     </nav>
