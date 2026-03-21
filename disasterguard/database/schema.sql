@@ -1,6 +1,6 @@
 -- ============================================================
 -- DisasterGuard — Supabase Schema
--- Run this entire file in your Supabase SQL editor once.
+
 -- ============================================================
 
 -- 1. disaster_events: raw data from weather API + risk classification
