@@ -322,5 +322,14 @@ disasterguard/
 <img width="1917" height="872" alt="Alert" src="https://github.com/user-attachments/assets/1bd9bb00-42a6-4053-a873-242394193587" />
 
 
+🌐 **Live Site:** https://disasterguard-six.vercel.app
+
+**Demo credentials (try it yourself):**
+```
+Email:    demo@disasterguard.com
+Password: Demo@1234
+```
+
+
 
 
