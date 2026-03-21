@@ -8,13 +8,6 @@ import Alerts from './pages/Alerts'
 import Shelters from './pages/Shelters'
 import Replay from './pages/Replay'
 
-// Inside <Routes> add:
-<Route path="/replay" element={
-  <ProtectedRoute>
-    <AppLayout><Replay /></AppLayout>
-  </ProtectedRoute>
-} />
-
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
   if (loading) return <LoadingSpinner />
@@ -49,6 +42,11 @@ export default function App() {
         <Route path="/shelters" element={
           <ProtectedRoute>
             <AppLayout><Shelters /></AppLayout>
+          </ProtectedRoute>
+        } />
+        <Route path="/replay" element={
+          <ProtectedRoute>
+            <AppLayout><Replay /></AppLayout>
           </ProtectedRoute>
         } />
         <Route path="*" element={<Navigate to="/" replace />} />
