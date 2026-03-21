@@ -10,13 +10,25 @@ const errorHandler = require('./middleware/errorHandler')
 const app = express()
 const PORT = process.env.PORT || 3001
 
-// SSE clients store — shared via app.locals
 app.locals.sseClients = []
 
+// SSE clients store — shared via app.locals
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: function(origin, callback) {
+    if (
+      !origin ||
+      origin === 'http://localhost:5173' ||
+      origin.endsWith('.vercel.app') ||
+      origin === process.env.FRONTEND_URL
+    ) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
   credentials: true
 }))
+
 app.use(express.json())
 
 // Health check
